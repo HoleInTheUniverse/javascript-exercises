@@ -1,7 +1,6 @@
 const sumAll = function(x, y) {
-    if ((x < 1 || y < 1) || (typeof(x) !== "number" || typeof(y) !== "number") || (!Number.isInteger(x) || !Number.isInteger(y))) {
-        return 'ERROR';
-    }
+    if (!Number.isInteger(x) || !Number.isInteger(y)) return 'ERROR';
+    if (x < 0 || y < 0) return 'ERROR';
 
     const nTerm = Math.abs(x - y) + 1;
     return nTerm / 2 * (x + y);
